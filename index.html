@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Bestie 💖</title>
+    
+    <style>
+        /* إعدادات الخلفية المتحركة */
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* تنسيق الزر */
+        #play-btn {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: #d63384;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 50px; 
+            cursor: pointer;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.4s ease;
+            animation: pulse 2s infinite;
+        }
+
+        #play-btn:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: translateY(-5px);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* حاوية الرسائل مخفية في البداية */
+        #messages {
+            width: 100%;
+            display: none; 
+            flex-direction: column;
+        }
+
+        /* تنسيق البطاقات */
+        .message-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
+            
+            /* مسافة بين البطاقات */
+            margin-bottom: 60px; 
+            
+            /* إعدادات الإخفاء والظهور (الأنيميشن) */
+            opacity: 0; 
+            transform: translateY(60px) scale(0.9);
+            transition: all 0.8s cubic-bezier(0.5, 1, 0.89, 1);
+        }
+
+        /* الكلاس الذي يظهر البطاقة */
+        .message-card.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* تنسيق النص */
+        .mixed-text {
+            text-align: center;
+            font-size: 24px;
+            color: #b30059; 
+            line-height: 1.8;
+            font-weight: bold;
+            margin: 0;
+            direction: rtl;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="12345.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <button id="play-btn">✨ دوسي هنا يا قمر ✨</button>
+
+        <div id="messages">
+            
+            <div class="message-card">
+                <p class="mixed-text">يا أحلى bestie في الدنيا كلها ✨💖 بجد إنتي مش بس صاحبتي، إنتي albi</p>
+            </div>
+
+            <div class="message-card">
+                <p class="mixed-text">رغم إننا معندناش pictures مع بعض 📸🚫 بس الـ memories بتاعتنا محفورة في قلبي 🧠❤️ ومفيش كاميرا في الدنيا تقدر تصورها 😌✨</p>
+            </div>
+
+            <div class="message-card">
+                <p class="mixed-text">كل ما أسمع صوتك وإنتي بتغني 🎤🎶 بحس إن الـ mood بتاعي بيتغير للأحسن 🥺💖 ur voice is literal magic ✨</p>
+            </div>
+
+            <div class="message-card">
+                <p class="mixed-text">بجد thank you إنك موجودة في حياتي 🙏🌸 دايماً بتعملي support ليا في كل حاجة وتفهميني من غير ما أتكلم 💪💕</p>
+            </div>
+
+            <div class="message-card">
+                <p class="mixed-text">يو آر ذا بيست بجد 🌟👑 ومهما حصل هتفضلي my favorite person 🫶🫂 بحبك جداااا يا قلبي 💖✨</p>
+            </div>
+
+            <div class="message-card">
+                <p class="mixed-text">إنتي الـ safe place بتاعي 🏠💖 لما بكون متضايق أو زعلان، مفيش حد بيعرف يروّقني غيرك 🥺✨ literally my therapist 🛋️😂</p>
+            </div>
+
+            <div class="message-card">
+                <p class="mixed-text">أنا بجد محظوظة إن عندي best friend زيك 🍀👑 إنتي نعمة ربنا رزقني بيها، and I will always protect you 🦸‍♀️💕</p>
+            </div>
+
+            <div class="message-card">
+                <p class="mixed-text">خلينا دايماً مع بعض، through thick and thin 🤞💖 بحبك لحد النجوم ونرجع تاني 🌟🚀</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const playBtn = document.getElementById('play-btn');
+        const bgMusic = document.getElementById('bg-music');
+        const messagesDiv = document.getElementById('messages');
+        // هنا نقوم بتحديد كل البطاقات الموجودة حالياً
+        const cards = document.querySelectorAll('.message-card');
+
+        playBtn.addEventListener('click', function() {
+            bgMusic.play();
+            playBtn.style.display = 'none';
+            messagesDiv.style.display = 'flex';
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            cards.forEach((card) => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
